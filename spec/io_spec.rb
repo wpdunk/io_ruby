@@ -4,9 +4,11 @@ describe  do
 
   it "says hello to user" do
     say_hello = Io.new
+    puts "enter name to test"
     name = gets.chomp
+    puts "repeat name for program"
     expect { say_hello.run }.to output(
-     a_string_including("hello will")
+     a_string_including("hello #{name}")
    ).to_stdout
   end
 
